@@ -1,0 +1,7 @@
+version: "3"
+services:
+  front:
+    image: pyar6329/sample-front:1.0
+    ports:
+      - "8080:8080"
+
