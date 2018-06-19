@@ -1,1 +1,4 @@
 /proris-front
+gke-credentials.json
+kubeconfig
+.envrc

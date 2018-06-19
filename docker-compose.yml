@@ -1,7 +1,18 @@
 version: "3"
 services:
-  front:
-    image: pyar6329/sample-front:1.0
+  proris-front:
+    container_name: sample-proris-front
+    image: pyar6329/sample-proris-front:1.0
+    # ports:
+    #   - "8080:8080"
+  nginx:
+    container_name: sample-nginx
+    image: pyar6329/sample-nginx:1.0
     ports:
-      - "8080:8080"
+      - "80:80"
+    volumes:
+      - "./nginx/config/default.conf:/etc/nginx/conf.d/default.conf"
+      - "./nginx/config/nginx.conf:/etc/nginx/nginx.conf"
+    links:
+      - proris-front
 
