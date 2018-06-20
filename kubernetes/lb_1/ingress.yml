@@ -2,8 +2,10 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: test-ingress
-  # annotations:
-  #   kubernetes.io/ingress.global-static-ip-name: "test-static"
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "test-ingress"
+    kubernetes.io/ingress.class: "gce"
+    # kubernetes.io/tls-acme: "true"
 spec:
   rules:
   - host: example.net
