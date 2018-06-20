@@ -2,3 +2,4 @@
 gke-credentials.json
 kubeconfig
 .envrc
+/api
